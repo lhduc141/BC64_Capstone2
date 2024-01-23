@@ -31,9 +31,42 @@
 .footer__content img {
   width: 250px;
   height: 250px;
-  border-radius: 10px;
+  border-radius: 30px;
+  background-color: #fefefe;
 }
 
 .footer__content .admin__page {
   margin-right: 180px;
+  transition: all 0.5s;
+}
+
+.footer__content .store__page {
+  transition: all 0.5s;
+}
+
+.footer__content h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  transition: all 0.5s;
+}
+
+.footer__content a:hover {
+  text-decoration: none;
+}
+
+.footer__content .admin__page:hover {
+  transform: translateY(-30px);
+}
+
+.footer__content .store__page:hover {
+  transform: translateY(-30px);
+}
+
+.footer__content .admin__page:hover h1 {
+  color: pink;
+}
+
+.footer__content .store__page:hover h1 {
+  color: pink;
 }/*# sourceMappingURL=style.css.map */
