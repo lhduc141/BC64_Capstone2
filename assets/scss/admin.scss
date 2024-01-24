@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserat", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header__admin {
+  background-color: #434344;
+  height: 70px;
+}
+
+.header__admin .container {
+  display: flex;
+  //   align-items: center;
+}
+
+.header__admin .container a {
+  color: white;
+}
+
+.header__admin .home__admin {
+  margin-right: 100px;
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+.header__admin .home__admin i span {
+  margin-left: 10px;
+}
+
+.header__admin .admin__item {
+  display: flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.header__admin .admin__item a {
+  padding-left: 30px;
+  transition: all 0.3s;
+}
+
+.header__admin .admin__item a:hover {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.phone__list .container .phone__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #030637;
+  margin-top: 80px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 15px 8px;
+}
+
+.phone__list .container .phone__top h3 {
+  color: white;
+  font-weight: 600;
+}
+
+.phone__list .phone__top .add__phone .btn-primary {
+  color: white;
+}
+
+.phone__list .phone__top .add__phone i {
+  padding-right: 7px;
+}
+
+.phone__list .phone__bottom table thead tr {
+  background-color: #720455;
+}
+
+.footer__admin {
+  margin-top: 150px;
+}
+
+.footer__admin .footer__contact .contact__left {
+  margin-right: 40px;
+}
+
+.footer__admin .footer__contact {
+  padding: 20px;
+}
+
+.footer__admin {
+  background: linear-gradient(
+    0deg,
+    rgba(207, 93, 141, 1) 0%,
+    rgba(12, 60, 88, 1) 100%
+  );
+  color: white;
+}
+
+.footer__contact {
+  border-bottom: 1px solid white;
+}
+
+.footer__content {
+  padding: 30px;
+}
+
+.footer__content a {
+  color: white;
+  transition: all 0.2s;
+}
+
+.footer__content a:hover {
+  text-decoration: none;
+  color: rgb(208, 205, 205);
+}
+
+.footer__content .content__text span {
+  padding-left: 10px;
+}
+
+.footer__content .content__text p {
+  margin-top: 20px;
+}
+
+.footer__content .content__contact i {
+  margin-bottom: 20px;
+}
+
+.footer__content .content__contact span {
+  margin-left: 10px;
+}
+
+.footer__copyright {
+  border-top: 1px solid rgba(248, 241, 245, 0.8);
+}
+
+.footer__copyright p {
+  padding: 30px;
+  text-align: center;
+}
+
+.footer__copyright a {
+  color: white;
+}
