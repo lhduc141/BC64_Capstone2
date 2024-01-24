@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserat", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #434344;
+  height: 70px;
+}
+header .header_inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .header_inner .header_logo {
+  margin-right: 100px;
+}
+header .header_inner .header_logo a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+header .header_inner .header_btn {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  text-align: center;
+}
+header .header_inner .header_btn .btn_left {
+  display: flex;
+  text-align: center;
+  width: 15%;
+  justify-content: space-between;
+}
+header .header_inner .header_btn .btn_left a {
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+header .header_inner .header_btn .btn_left a:hover {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+header .header_inner .header_btn .btn-right a {
+  align-items: center;
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 700;
+}
+header .header_inner .header_btn .btn-right a:hover {
+  font-size: 30px;
+}/*# sourceMappingURL=user.css.map */
