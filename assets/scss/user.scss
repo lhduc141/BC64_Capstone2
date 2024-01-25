@@ -42,6 +42,9 @@
 //Variables
 //color
 $color-white: #ffffff;
+$color-black: black;
+$color-txt: rgb(245, 245, 247);
+$color-bg: #f5f5f7;
 
 //font weight:
 $fw-normal: 400;
@@ -52,9 +55,12 @@ $fw-semi-bold: 600;
 $fs-heading: 22px;
 
 //___________________________________________________________________________________
+body {
+  background-color: $color-bg;
+}
 
 header {
-  background-color: #434344;
+  background-color: $color-bg;
   height: 70px;
 
   .header_inner {
@@ -66,7 +72,7 @@ header {
       margin-right: 100px;
 
       a {
-        @include styleEleA($fs-heading, $color-white, $fw-bold);
+        @include styleEleA($fs-heading, rgba(0, 0, 0, 0.8), $fw-bold);
       }
     }
 
@@ -83,29 +89,102 @@ header {
         justify-content: space-between;
 
         a {
+          padding: 10px 20px;
           transition: all 0.5s;
 
-          @include styleEleA(1rem, $color-white, $fw-bold);
+          @include styleEleA(1rem, rgba(0, 0, 0, 0.8), $fw-bold);
 
           &:hover {
             text-decoration: none;
+            padding: 10px 17px;
             font-size: 1.2rem;
           }
         }
       }
 
       .btn-right {
+        margin-top: 20px;
         a {
-          align-items: center;
           transition: all 0.5s;
 
-          @include styleEleA(22px, $color-white, $fw-bold);
+          @include styleEleA(22px, rgba(0, 0, 0, 0.8), $fw-bold);
 
           &:hover {
-            font-size: 30px;
+            font-size: 25px;
           }
         }
       }
     }
+  }
+}
+.header-fixed-space {
+  margin-top: 70px;
+}
+
+//CAROUSEL
+.portCarousel {
+  padding-top: 50px;
+  background-color: $color-black;
+  height: 420px;
+
+  .carousel_inner {
+    background-color: $color-black;
+
+    .item {
+      .item_inner {
+        display: flex;
+        justify-content: center;
+
+        .item_left {
+          // display: block;
+          width: 50%;
+          .item_content {
+            padding-bottom: 30px;
+
+            h2 {
+              padding-bottom: 20px;
+
+              @include styleEleA(40px, $color-txt, $fw-bold);
+            }
+
+            span {
+              max-width: 70%;
+              @include styleEleA(20px, $color-txt, $fw-normal);
+            }
+          }
+
+          a {
+            padding: 10px;
+            border: 1px solid $color-white;
+            border-radius: 10px;
+            transition: all 0.5s;
+
+            @include styleEleA(22px, $color-white, $fw-bold);
+
+            &:hover {
+              background-color: $color-white;
+              color: $color-black;
+            }
+          }
+        }
+        .item_right {
+          img {
+            max-width: 80%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.store {
+  margin-top: 50px;
+  h2 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+
+    @include styleEleA(40px, $color-black, $fw-bold);
   }
 }
