@@ -139,4 +139,12 @@
 
 .footer__copyright a {
   color: white;
+}
+
+.modal-body .spanThongBao {
+  color: red;
+}
+
+.phone__list .container .phone__top #searchName {
+  width: 20%;
 }/*# sourceMappingURL=admin.css.map */

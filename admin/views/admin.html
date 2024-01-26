@@ -51,6 +51,12 @@
       <div class="container">
         <div class="phone__top">
           <h3>Phone Management</h3>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Tìm Kiếm Theo Tên..."
+            id="searchName"
+          />
           <div class="add__phone">
             <button
               type="button"
@@ -78,6 +84,24 @@
                   </div>
                   <!-- Modal body -->
                   <div class="modal-body">
+                    <div class="id">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"
+                            ><i class="fa-solid fa-mobile-screen-button"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="phoneID"
+                          placeholder="ID Phone"
+                          value=""
+                          required
+                        />
+                      </div>
+                      <span class="spanThongBao" id="tbID"></span>
+                    </div>
                     <div class="name">
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -94,6 +118,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbName"></span>
                     </div>
                     <div class="price">
                       <div class="input-group mb-3">
@@ -111,6 +136,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbPrice"></span>
                     </div>
                     <div class="screen">
                       <div class="input-group mb-3">
@@ -128,6 +154,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbScreen"></span>
                     </div>
                     <div class="black">
                       <div class="input-group mb-3">
@@ -145,6 +172,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbBlack"></span>
                     </div>
                     <div class="front">
                       <div class="input-group mb-3">
@@ -154,7 +182,7 @@
                           ></span>
                         </div>
                         <input
-                          id="backCamera"
+                          id="frontCamera"
                           type="text"
                           class="form-control"
                           placeholder="Front Camera"
@@ -162,6 +190,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbPront"></span>
                     </div>
                     <div class="image">
                       <div class="input-group mb-3">
@@ -179,6 +208,7 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
+                      <span class="spanThongBao" id="tbImage"></span>
                     </div>
                     <div class="desc">
                       <div class="input-group mb-3">
@@ -196,27 +226,42 @@
                           aria-describedby="basic-addon1"
                         />
                       </div>
-                      <div class="brand">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"
-                              ><i class="fa-solid fa-link"></i
-                            ></span>
-                          </div>
-                          <select class="custom-select" id="inputGroupSelect03">
-                            <option selected>Select brand</option>
-                            <option value="apple">Apple</option>
-                            <option value="samsung">Sam Sung</option>
-                          </select>
+                      <span class="spanThongBao" id="tbDesc"></span>
+                    </div>
+                    <div class="brand">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"
+                            ><i class="fa-solid fa-link"></i
+                          ></span>
                         </div>
+                        <select class="custom-select" id="brandPhone">
+                          <option selected>Select brand</option>
+                          <option value="Apple">Apple</option>
+                          <option value="Samsung">Sam Sung</option>
+                        </select>
                       </div>
+                      <span class="spanThongBao" id="tbBrand"></span>
                     </div>
                   </div>
 
                   <!-- Modal footer -->
                   <div class="modal-footer">
-                    <button class="btn btn-warning" id="addPhone">
+                    <button
+                      onclick="createPhone()"
+                      type="button"
+                      class="btn btn-warning"
+                      id="btnAddPhone"
+                    >
                       Add Phone
+                    </button>
+                    <button
+                      onclick="updatePhone()"
+                      type="button"
+                      class="btn btn-warning"
+                      id="btnUpdate"
+                    >
+                      Update
                     </button>
                     <button
                       type="button"
@@ -240,11 +285,12 @@
                   <th>Name</th>
                   <th>Price</th>
                   <th>Photo</th>
+                  <th>Kind</th>
                   <th>Discription</th>
                   <th><i class="fa-solid fa-gear"></i> <span>Action</span></th>
                 </tr>
               </thead>
-              <tbody id="tbodyFood"></tbody>
+              <tbody id="tbodyPhone"></tbody>
             </table>
           </div>
         </div>
@@ -330,5 +376,18 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- axios  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.6/axios.min.js"
+      integrity="sha512-CmAbe9oceGW5QqQ3m4+xHwUEILjqe3qxPkgdAsGL6mTDSqNcnoHDDdl+rZTwibMlnw0Sqf3IRvfsKNfIKqX/8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Sweet Alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../controllers/validation/validation.js"></script>
+    
+    <script type="module" src="../controllers/main-user.js"></script>
   </body>
 </html>
