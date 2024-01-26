@@ -66,9 +66,8 @@
             </div>
 
             <div class="btn-right">
-              <a href=""
+              <a href="#" class="shop-cart" role="button" id="shop-cart"
                 ><i class="fa fa-shopping-cart"></i>
-                <!-- <h6>Admin</h6> -->
               </a>
             </div>
           </div>
@@ -76,6 +75,29 @@
       </div>
     </header>
     <div class="header-fixed-space"></div>
+
+    <section class="cart off-canvas-panel" id="cart">
+      <div class="side-nav" id="side-nav">
+        <div class="cart_heading">
+          <h2>Cart</h2>
+          <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="cart_item"></div>
+
+        <div class="cart_footer">
+          <strong>Total: $ <span class="total">0</span></strong>
+          <div class="action">
+            <button onclick="" class="btn buy">
+              Purchase <i class="fas fa-credit-card" style="color: #6665dd"></i>
+            </button>
+            <button onclick="" class="btn clear">
+              Clear Cart <i class="fas fa-trash" style="color: #bb342f"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="portCarousel">
       <div class="carousel_inner">
@@ -137,6 +159,32 @@
     <section class="store">
       <div class="container">
         <h2>Which is right for you</h2>
+        <div class="store_inner">
+          <div class="store_filter">
+            <div class="dropdown">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select brands
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"
+                  >iPhone <i class="fab fa-apple"></i
+                ></a>
+                <a class="dropdown-item" href="#">SamSung</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="main_cart">
+            <div class="row"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -206,5 +254,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script src="../controller/user.js"></script>
   </body>
 </html>
