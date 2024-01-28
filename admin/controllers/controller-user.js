@@ -1,6 +1,19 @@
 export let renderPhoneList = (phoneArr) => {
   let contentHTML = "";
-  phoneArr.reverse().forEach((item) => {
+  var selectElement = document.getElementById("sort__item").value * 1;
+  var arrayRender = [...phoneArr];
+  switch (selectElement) {
+    case 0:
+      break;
+    case 1:
+      arrayRender.sort((a, b) => b.price - a.price);
+      break;
+    case 2:
+      arrayRender.sort((a, b) => a.price - b.price);
+      break;
+  }
+
+  arrayRender.reverse().forEach((item) => {
     let trString = `
         <tr>
             <td>${item.id}</td>
