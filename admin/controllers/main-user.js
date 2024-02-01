@@ -15,31 +15,54 @@ let getValuePhone = () => {
   let arrError = document.querySelectorAll(".modal-body .spanThongBao");
   let isValid = true;
   for (var i = 0; i < arrInput.length; i++) {
-    if (arrInput[i].id == "phoneID") {
-      isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "name") {
-      isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "price") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "screen") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "backCamera") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "frontCamera") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "image") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "desc") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
-    } else if (arrInput[i].id == "brandPhone") {
-      isValid &= isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
+    var inputId = arrInput[i].id;
+    var inputValue = arrInput[i].value;
+    var errorId = arrError[i].id;
+
+    if (inputId == "phoneID") {
+      isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkOnlyNums(inputValue, errorId);
+    } else if (inputId == "name") {
+      isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkNameValue(inputValue, errorId);
+    } else if (inputId == "price") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkMinMaxInt(inputValue, errorId, 1) &&
+        checkOnlyNums(inputValue, errorId);
+    } else if (inputId == "screen") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkScreen(inputValue, errorId);
+    } else if (inputId == "backCamera") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkCamera(inputValue, errorId);
+    } else if (inputId == "frontCamera") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkCamera(inputValue, errorId);
+    } else if (inputId == "image") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkImgSrc(inputValue, errorId);
+    } else if (inputId == "desc") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) &&
+        checkMinMaxValue(inputValue, errorId, 1, 100000);
+    } else if (inputId == "brandPhone") {
+      isValid &= isValid &=
+        checkEmptyValue(inputValue, errorId) && checkType(inputValue, errorId);
     } else {
-      isValid &= checkEmptyValue(arrInput[i].value, arrError[i].id);
+      isValid &= checkEmptyValue(inputValue, arrError[i].id);
     }
     var id = arrInput[i].id;
   }
+
+  return isValid;
 };
-getValuePhone();
 
 const fectPhoneList = () => {
   phoneSV
@@ -73,18 +96,20 @@ window.deletePhone = deletePhone;
 
 let createPhone = () => {
   console.log("hihi");
-  let dataPhone = getDataForm();
-  phoneSV
-    .createPhoneAPI(dataPhone)
-    .then((res) => {
-      console.log(res);
-      fectPhoneList();
-      onSuccess("Thêm thành công");
-      $($("#myModal").modal("hide"));
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (getValuePhone()) {
+    let dataPhone = getDataForm();
+    phoneSV
+      .createPhoneAPI(dataPhone)
+      .then((res) => {
+        console.log(res);
+        fectPhoneList();
+        onSuccess("Thêm thành công");
+        $($("#myModal").modal("hide"));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 };
 window.createPhone = createPhone;
 
