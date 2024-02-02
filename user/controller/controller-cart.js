@@ -1,7 +1,7 @@
 export let renderPhoneList = (phoneArr) => {
   let contentHTML = "";
-  // var selectElement = document.getElementById("sort__item").value * 1;
   var arrayRender = [...phoneArr];
+  // var selectElement = document.getElementById("sort__item").value * 1;
   // switch (selectElement) {
   //   case 0:
   //     break;
@@ -14,8 +14,10 @@ export let renderPhoneList = (phoneArr) => {
   // }
 
   arrayRender.reverse().forEach((item) => {
+    console.log("check render");
+
     let trString = `
-    <div class="col-4 store_items">
+    <div class="col-3 store_items">
     <div class="store_inner">
       <div class="store_img">
         <img src="${item.image}" alt="" />

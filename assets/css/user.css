@@ -246,6 +246,7 @@ header .header_inner .header_btn .btn-right a:hover {
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_content h2 {
   padding-bottom: 0;
   margin: 0;
+  font-size: 20px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_content h3 {
   margin: auto 0;
