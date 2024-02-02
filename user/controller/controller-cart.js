@@ -1,45 +1,45 @@
 export let renderPhoneList = (phoneArr) => {
   let contentHTML = "";
-  // var selectElement = document.getElementById("sort__item").value * 1;
   var arrayRender = [...phoneArr];
-  // switch (selectElement) {
-  //   case 0:
-  //     break;
-  //   case 1:
-  //     arrayRender.sort((a, b) => b.price - a.price);
-  //     break;
-  //   case 2:
-  //     arrayRender.sort((a, b) => a.price - b.price);
-  //     break;
-  // }
+  var selectElement = document.getElementById("sort__item").value * 1;
 
   arrayRender.reverse().forEach((item) => {
     let trString = `
-    <div class="col-4 store_items">
-    <div class="store_inner">
-      <div class="store_img">
-        <img src="${item.image}" alt="" />
-      </div>
-      <div class="store_desc">
-        <div class="store_content">
-          <h2 id="name">${item.name}</h2>
-          <h3 id="price">${item.price}</h3>
-        </div>
+        <div class="col-3 store_items">
+        <div class="store_inner">
+          <div class="store_img">
+            <img src="${item.image}" alt="" />
+          </div>
+          <div class="store_desc">
+            <div class="store_content">
+              <h2 id="name">${item.name}</h2>
+            </div>
 
-        <div class="store_descContent">
-          <span id="desc">
-            ${item.desc}
-          </span>
-        </div>
+            <div class="store_descContent">
+              <span id="desc">
+                ${item.desc}
+              </span>
+            </div>
 
-        <div class="store_add">
-          <a href="#" class="btn buy" onclick="">BUY NOW</a>
+            <div class="store_add">
+              <h3 id="price">${item.price}$</h3>
+              <a class="btn buy" onclick="addToCart(${item.id})">BUY NOW</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
     `;
-    contentHTML += trString;
+    switch (selectElement) {
+      case 0:
+        contentHTML += trString;
+        break;
+      case 1:
+        if (item.type.toLowerCase() == "apple") contentHTML += trString;
+        break;
+      case 2:
+        if (item.type.toLowerCase() == "samsung") contentHTML += trString;
+        break;
+    }
   });
   document.getElementById("main_store").innerHTML = contentHTML;
 };
