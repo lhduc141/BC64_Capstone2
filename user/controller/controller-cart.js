@@ -1,19 +1,10 @@
 export let renderPhoneList = (phoneArr) => {
   let contentHTML = "";
   var arrayRender = [...phoneArr];
-  // var selectElement = document.getElementById("sort__item").value * 1;
-  // switch (selectElement) {
-  //   case 0:
-  //     break;
-  //   case 1:
-  //     arrayRender.sort((a, b) => b.price - a.price);
-  //     break;
-  //   case 2:
-  //     arrayRender.sort((a, b) => a.price - b.price);
-  //     break;
-  // }
+  var selectElement = document.getElementById("sort__item").value * 1;
 
   arrayRender.reverse().forEach((item) => {
+    console.log("check type: " + item.type.toLowerCase());
     let trString = `
         <div class="col-3 store_items">
         <div class="store_inner">
@@ -39,7 +30,17 @@ export let renderPhoneList = (phoneArr) => {
         </div>
       </div>
     `;
-    contentHTML += trString;
+    switch (selectElement) {
+      case 0:
+        contentHTML += trString;
+        break;
+      case 1:
+        if (item.type.toLowerCase() == "apple") contentHTML += trString;
+        break;
+      case 2:
+        if (item.type.toLowerCase() == "samsung") contentHTML += trString;
+        break;
+    }
   });
   document.getElementById("main_store").innerHTML = contentHTML;
 };

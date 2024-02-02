@@ -29,3 +29,10 @@ const fectPhoneList = () => {
     });
 };
 fectPhoneList();
+
+// Assuming you have a reference to the select element
+var selectElement = document.getElementById("sort__item");
+// Initialize the "sort" variable
+selectElement.addEventListener("change", function () {
+  renderPhoneList(phoneList);
+});

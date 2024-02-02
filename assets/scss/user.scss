@@ -275,13 +275,11 @@ header {
 
   //Store sort
   .store_filter {
-    padding-bottom: 30px;
-    .dropdown {
-      a.dropdown-toggle {
-        border: 1px solid black;
-
-        background-color: $color-bg;
-      }
+    padding-bottom: 20px;
+    select {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 10px;
     }
   }
 

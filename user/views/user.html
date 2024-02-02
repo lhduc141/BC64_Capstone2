@@ -162,50 +162,15 @@
         <h2>Which is right for you</h2>
         <div class="store_inner">
           <div class="store_filter">
-            <div class="dropdown">
-              <a
-                class="btn dropdown-toggle"
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Select brands
-              </a>
-
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"
-                  >iPhone <i class="fab fa-apple"></i
-                ></a>
-                <a class="dropdown-item" href="#">SamSung</a>
-              </div>
-            </div>
+            <select name="sort__items" id="sort__item">
+              <option value="0">Select brands</option>
+              <option value="1">iPhone <i class="fab fa-apple"></i</option>
+              <option value="2">SamSung</option>
+            </select>
           </div>
 
           <div class="store_cart">
-            <div class="row main_store" id="main_store">
-              <div class="col-3 store_items">
-                <div class="store_inner">
-                  <div class="store_img">
-                    <img src="${item.image}" alt="" />
-                  </div>
-                  <div class="store_desc">
-                    <div class="store_content">
-                      <h2 id="name">${item.name}</h2>
-                    </div>
-
-                    <div class="store_descContent">
-                      <span id="desc"> ${item.desc} </span>
-                    </div>
-
-                    <div class="store_add">
-                      <h3 id="price">${item.price}</h3>
-                      <a href="#" class="btn buy" onclick="">BUY NOW</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="row main_store" id="main_store"></div>
           </div>
         </div>
       </div>
