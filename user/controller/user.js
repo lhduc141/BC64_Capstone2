@@ -1,7 +1,7 @@
 console.log("check data input");
 
-import phoneData from "../services/service-cart";
-// import { renderPhoneList } from "./controller-cart";
+import phoneData from "../services/service-cart.js";
+import { renderPhoneList } from "./controller-cart.js";
 
 //open and off cart
 document.getElementById("shop-cart").onclick = () => {
