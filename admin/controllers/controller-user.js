@@ -19,7 +19,7 @@ export let renderPhoneList = (phoneArr) => {
             <td>${item.id}</td>
             <td>${item.name}</td>
             <td>${item.price}</td>
-            <td>${item.image}</td>
+            <td><img src="${item.image}"></td>
             <td>${item.type}</td>
             <td>${item.desc}</td>
             <td>
