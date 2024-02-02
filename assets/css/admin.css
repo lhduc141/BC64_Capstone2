@@ -147,6 +147,9 @@
 
 .phone__list .container .phone__top #searchName {
   width: 20%;
+<<<<<<< HEAD
+}/*# sourceMappingURL=admin.css.map */
+=======
 }
 
 .phone__list .add__phone select {
@@ -157,3 +160,4 @@
 #tbodyPhone tr td img {
   width: 50px;
 }
+>>>>>>> 8d3080c6da3fb4e663436a6719d13beb74327205
