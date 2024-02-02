@@ -176,15 +176,28 @@
         <h2>Which is right for you</h2>
         <div class="store_inner">
           <div class="store_filter">
-            <select name="sort__items" id="sort__item">
-              <option value="0">Select brands</option>
-              <option value="1">iPhone <i class="fab fa-apple"></i</option>
-              <option value="2">SamSung</option>
-            </select>
+            <div class="dropdown">
+              <a
+                class="btn dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select brands
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#"
+                  >iPhone <i class="fab fa-apple"></i
+                ></a>
+                <a class="dropdown-item" href="#">SamSung</a>
+              </div>
+            </div>
           </div>
 
-          <div class="store_cart">
-            <div class="row main_store" id="main_store"></div>
+          <div class="main_cart">
+            <div class="row"></div>
           </div>
         </div>
       </div>
@@ -257,14 +270,6 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- Axios -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.6/axios.min.js"
-      integrity="sha512-CmAbe9oceGW5QqQ3m4+xHwUEILjqe3qxPkgdAsGL6mTDSqNcnoHDDdl+rZTwibMlnw0Sqf3IRvfsKNfIKqX/8g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script type="module" src="../controller/user.js"></script>
+    <script src="../controller/user.js"></script>
   </body>
 </html>
