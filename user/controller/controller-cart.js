@@ -14,33 +14,30 @@ export let renderPhoneList = (phoneArr) => {
   // }
 
   arrayRender.reverse().forEach((item) => {
-    console.log("check render");
-
     let trString = `
-    <div class="col-3 store_items">
-    <div class="store_inner">
-      <div class="store_img">
-        <img src="${item.image}" alt="" />
-      </div>
-      <div class="store_desc">
-        <div class="store_content">
-          <h2 id="name">${item.name}</h2>
-          
-        </div>
+        <div class="col-3 store_items">
+        <div class="store_inner">
+          <div class="store_img">
+            <img src="${item.image}" alt="" />
+          </div>
+          <div class="store_desc">
+            <div class="store_content">
+              <h2 id="name">${item.name}</h2>
+            </div>
 
-        <div class="store_descContent">
-          <span id="desc">
-            ${item.desc}
-          </span>
-        </div>
+            <div class="store_descContent">
+              <span id="desc">
+                ${item.desc}
+              </span>
+            </div>
 
-        <div class="store_add">
-          <h3 id="price">${item.price}$</h3>
-          <a href="#" class="btn buy" onclick="">BUY NOW</a>
+            <div class="store_add">
+              <h3 id="price">${item.price}$</h3>
+              <a href="#" class="btn buy" onclick="">BUY NOW</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
     `;
     contentHTML += trString;
   });
