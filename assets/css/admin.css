@@ -147,4 +147,9 @@
 
 .phone__list .container .phone__top #searchName {
   width: 20%;
-}/*# sourceMappingURL=admin.css.map */
+}
+
+.phone__list .add__phone select {
+  padding: 8px;
+  border-radius: 5px;
+}
