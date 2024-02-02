@@ -276,4 +276,18 @@ header .header_inner .header_btn .btn-right a:hover {
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_add a:hover {
   background-color: black;
   color: white;
+}
+
+.cart_item td {
+  color: white;
+  text-align: left;
+  vertical-align: middle;
+}
+.cart_item td a {
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.cart_item td a:hover {
+  text-decoration: none;
+  font-weight: 600;
 }/*# sourceMappingURL=user.css.map */

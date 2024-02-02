@@ -360,3 +360,21 @@ header {
     }
   }
 }
+
+.cart_item {
+  td {
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+
+    a {
+      font-size: 20px;
+      transition: all 0.5s;
+
+      &:hover {
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+}

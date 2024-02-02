@@ -27,6 +27,7 @@ export let renderPhoneList = (phoneArr) => {
                 <button onclick="deletePhone(${item.id})" class="btn btn-danger">Delete</button>
             </td>
         </tr>
+
     `;
     contentHTML += trString;
   });

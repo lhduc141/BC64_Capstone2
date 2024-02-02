@@ -72,10 +72,17 @@ const fetchCart = (cart) => {
     cart.reverse().forEach((item) => {
       let trString = `
       <tr>
-      <td>${item.name}</td>
-      <td>${item.price}</td>
-      <td>${item.num}</td>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.num}</td>
+        <td> 
+          <a>
+              <span>delete</span>
+          </a>
+        
+        </td>
       </tr>
+      </br>
       `;
       contentHTML += trString;
     });

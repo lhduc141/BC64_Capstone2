@@ -84,7 +84,21 @@
           <button id="close-cart"><i class="fas fa-times"></i></button>
         </div>
 
-        <div class="cart_item" id="tbodyCart"></div>
+        <div class="cart_item">
+          <div class="table-responsive foodTable">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr class="text-white">
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Nums</th>
+                  <th><i class="fa-solid fa-gear"></i> <span>Action</span></th>
+                </tr>
+              </thead>
+              <tbody id="tbodyCart"></tbody>
+            </table>
+          </div>
+        </div>
 
         <div class="cart_footer">
           <strong>Total: $ <span class="total">0</span></strong>
@@ -92,7 +106,7 @@
             <button onclick="" class="btn buy">
               Purchase <i class="fas fa-credit-card" style="color: #6665dd"></i>
             </button>
-            <button onclick="" class="btn clear">
+            <button onclick="clearCart()" class="btn clear">
               Clear Cart <i class="fas fa-trash" style="color: #bb342f"></i>
             </button>
           </div>
