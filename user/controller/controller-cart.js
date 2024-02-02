@@ -4,7 +4,6 @@ export let renderPhoneList = (phoneArr) => {
   var selectElement = document.getElementById("sort__item").value * 1;
 
   arrayRender.reverse().forEach((item) => {
-    console.log("check type: " + item.type.toLowerCase());
     let trString = `
         <div class="col-3 store_items">
         <div class="store_inner">
@@ -24,7 +23,7 @@ export let renderPhoneList = (phoneArr) => {
 
             <div class="store_add">
               <h3 id="price">${item.price}$</h3>
-              <a href="#" class="btn buy" onclick="">BUY NOW</a>
+              <a class="btn buy" onclick="addToCart(${item.id})">BUY NOW</a>
             </div>
           </div>
         </div>
