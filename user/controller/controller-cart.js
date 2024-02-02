@@ -25,7 +25,7 @@ export let renderPhoneList = (phoneArr) => {
       <div class="store_desc">
         <div class="store_content">
           <h2 id="name">${item.name}</h2>
-          <h3 id="price">${item.price}</h3>
+          
         </div>
 
         <div class="store_descContent">
@@ -35,6 +35,7 @@ export let renderPhoneList = (phoneArr) => {
         </div>
 
         <div class="store_add">
+          <h3 id="price">${item.price}$</h3>
           <a href="#" class="btn buy" onclick="">BUY NOW</a>
         </div>
       </div>

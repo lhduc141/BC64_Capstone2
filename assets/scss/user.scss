@@ -295,6 +295,7 @@ header {
           border: 1px solid transparent;
           border-radius: 20px;
           background-color: white;
+          height: 480px;
 
           .store_img {
             text-align: center;
@@ -316,28 +317,34 @@ header {
               text-align: left;
               justify-content: space-between;
               vertical-align: middle;
+              height: 30px;
 
               h2 {
                 padding-bottom: 0;
                 margin: 0;
                 font-size: 20px;
               }
-              h3 {
-                margin: auto 0;
-              }
             }
 
             .store_descContent {
               margin: 10px 20px;
+              height: 70px;
               .span {
                 font-size: 30px;
               }
             }
 
             .store_add {
+              display: flex;
+              justify-content: space-between;
               padding-bottom: 20px;
-              margin-right: 20px;
+              margin: 0 20px;
               text-align: right;
+
+              h3 {
+                margin: auto 0;
+                font-size: 20px;
+              }
 
               a {
                 border: 1px solid black;

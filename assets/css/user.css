@@ -225,6 +225,7 @@ header .header_inner .header_btn .btn-right a:hover {
   border: 1px solid transparent;
   border-radius: 20px;
   background-color: white;
+  height: 480px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_img {
   text-align: center;
@@ -242,25 +243,30 @@ header .header_inner .header_btn .btn-right a:hover {
   text-align: left;
   justify-content: space-between;
   vertical-align: middle;
+  height: 30px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_content h2 {
   padding-bottom: 0;
   margin: 0;
   font-size: 20px;
 }
-.store .store_cart .main_store .store_items .store_inner .store_desc .store_content h3 {
-  margin: auto 0;
-}
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_descContent {
   margin: 10px 20px;
+  height: 70px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_descContent .span {
   font-size: 30px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_add {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 20px;
-  margin-right: 20px;
+  margin: 0 20px;
   text-align: right;
+}
+.store .store_cart .main_store .store_items .store_inner .store_desc .store_add h3 {
+  margin: auto 0;
+  font-size: 20px;
 }
 .store .store_cart .main_store .store_items .store_inner .store_desc .store_add a {
   border: 1px solid black;
