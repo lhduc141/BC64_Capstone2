@@ -23,7 +23,7 @@ let checkEmptyValue = (value, errorId) => {
 
 //Name: Khong co ky tu dac biet
 let checkNameValue = (value, errorId) => {
-  var regexName = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
+  var regexName = /^[a-zA-Z0-9]+$/;
   var chekcNameValue = regexName.test(value);
   //nếu đi vào được if sẽ là trường hợp người dùng đã nhập dữ liệu vào rồi
   if (chekcNameValue) {
@@ -31,8 +31,7 @@ let checkNameValue = (value, errorId) => {
     return true;
   } else {
     //trường hợp khi value rỗng
-    document.getElementById(errorId).innerHTML =
-      "Không nhập số hoặc kí tự đặc biệt";
+    document.getElementById(errorId).innerHTML = "Không nhập kí tự đặc biệt";
     return false;
   }
 };
@@ -64,10 +63,10 @@ let checkOnlyNums = (value, errorId) => {
 //check camera: number + MP
 let checkCamera = (value, errorId) => {
   // Define a regular expression to match a number followed by "MP"
-  const regex = /^(\d+)\s*MP$/;
+  const regex = /.*(\d+MP).*/;
 
   // Test the provided string against the regular expression
-  const match = value.match(regex);
+  const match = value.test(regex);
 
   if (match) {
     //xử lý khi value đúng định dạng

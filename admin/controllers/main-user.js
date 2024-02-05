@@ -30,7 +30,7 @@ let getValuePhone = () => {
     } else if (inputId == "price") {
       isValid &= isValid &=
         checkEmptyValue(inputValue, errorId) &&
-        checkMinMaxInt(inputValue, errorId, 1) &&
+        checkMinMaxInt(inputValue, errorId, 1, 100000) &&
         checkOnlyNums(inputValue, errorId);
     } else if (inputId == "screen") {
       isValid &= isValid &=
